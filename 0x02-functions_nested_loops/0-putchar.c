@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
  * main - Entry point
@@ -14,8 +14,21 @@ int main(void)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		write(1, &str[i], 1);
+		_putchar(str[i]);
 	}
 
 	return (0);
+}
+
+/**
+ * _putchar - Writes a character to the standard output (stdout)
+ *
+ * @c: The character to be written
+ *
+ * Return: On success, returns the character written.
+ * On error, returns -1 and sets errno.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
