@@ -18,11 +18,12 @@ void times_table(void)
 
 			product = row * column;
 
-			/* Print the second digit with leading zero if necessary */
+			/* Print the second digit with leading space if necessary */
 			if (product <= 9)
 				_putchar(' ');
+			else
+				_putchar(product / 10 + '0');
 
-			_putchar(product / 10 + '0'); /* Print the first digit */
 			_putchar(product % 10 + '0'); /* Print the second digit */
 		}
 
