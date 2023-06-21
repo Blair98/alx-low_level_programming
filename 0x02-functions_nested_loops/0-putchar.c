@@ -16,7 +16,7 @@
 
         {
 
-        putchar('');
+        _putchar('');
 
         _putchar('p');
 
